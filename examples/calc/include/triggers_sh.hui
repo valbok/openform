@@ -1,0 +1,23 @@
+<update>
+ <widget name="MainWindow">
+  <property name="windowTitle">
+    <string>Calc based on Shell</string>
+  </property> 
+  <action name="action_shCalc">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="action_phpCalc">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+  </action>
+ </widget>
+
+<triggers>
+    <trigger object="btnEqual">
+        <event signal="clicked">./include/calc.sh {input.text}</event>
+    </trigger>    
+</triggers>
+</update>

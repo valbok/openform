@@ -1,0 +1,8 @@
+<connections>
+  <connection>
+   <sender>action_Quit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+  </connection> 
+</connections>

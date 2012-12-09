@@ -1,0 +1,155 @@
+* Open Form v.0.0.1 *
+=====================
+
+Open Form is a tool that provides possibility to create GUI which can be controled by external programs.
+Main point is to execute external programs on various events (e.g. clicking on buttons) and wait for new GUI.
+
+GUI is based on Qt Designer files (*.ui).
+
+* USAGE *
+=========
+
+$ ./openform <uifile>
+or
+$ cat <uifile> | ./openform
+
+where uifile is a file that has been created by Qt Designer.
+
+* Tutorial *
+============
+
+There are some additions to UI files:
+
+* 1. C o m m e n t s
+
+User can comment out any text by using '#' before it.
+For example:
+
+<ui version="4.0" >
+  <class>MainWindow</class>
+  <widget class="QMainWindow" name="MainWindow">
+  # This is a comment
+  <property name="windowTitle">
+    <string>MainWindow</string> # title of window
+  # <string>MainWindow changed</string> # unneeded title
+  </property>
+  </widget>
+</ui>
+
+* 2. I n c l u d e s
+
+Files can be included using "#include" derective.
+For example:
+
+file: geometry.hui:
+
+<property name="geometry" >
+  <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+</property>
+
+file: widget.ui:
+
+<ui version="4.0" >
+  <class>MainWindow</class>
+  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowTitle">
+    <string>MainWindow</string>
+  </property>
+  #include "geometry.hui"
+  </widget>
+</ui>
+
+* 3. T r i g g e r s
+
+User can define what should be done on specified events.
+For example:
+
+<triggers>
+  <trigger object="btnSubmit">
+    <event signal="clicked">cat update_widget.uui</event>	
+  </trigger>
+</triggers>
+
+It means if user clicks on the button with object name "btnSubmit"
+"cat update_widget.uui" command will be executed
+and returned data should be XML for creating new or updating current GUI.
+
+Trigger overview
+================
+
+# The section where triggers are located
+<triggers>
+  # Trigger for one object with name OBJECT_NAME
+  <trigger object="OBJECT_NAME">
+    # Events for current object. It defines what should be done:
+    #   signal: object signal of needed event
+    #   action: what should be don with COMMAND
+    #     "execute" - defines that COMMAND should be executed.
+    #                 Returned data will be used as XML to create/update GUI.
+    #     "return"  - defines that COMMAND should be printed out to stdout.
+    #                 It is useful when you want to ask user about something
+    #                 and wants to handle inputs from the user.
+    <event signal="SIGNAL" action="execute|return">COMMAND</event>
+  </trigger>
+</triggers>
+
+---------
+If you want to pass user inputs (or dynamic data) to external tool (e.g. for calculating)
+you can use in a command the following structure:
+{WIDGET_NAME.PROPERTY_NAME}
+
+For example:
+1)
+...
+<event signal="clicked">php script.php --user-input={lineEdit.text}</event>
+...
+
+Where {edit.text} means: from widget with name "lineEdit" fetch value of its property with name "text".
+In other words replace {edit.text} by text (which user entered) when user clicks on the button.
+
+2)
+...
+<event signal="clicked">php script.php --checked={checkBox.checked}</event>
+...
+
+{checkBox.checked} will be replaced by "true" or "false" according on property value.
+
+If you want to use "{" separately you can use "escape" character like "\{".
+
+* 4. U p d a t e s
+
+If you want to create new GUI and destroy previous you should use:
+<ui version="4.0">
+...
+</ui>
+
+But if you just want to update some widgets and keep existing GUI with triggers and connections you should use
+<update>
+...
+</update>
+
+----------
+If you want to define GUI in commands you can use "[[" instead of "<" and "]]" instead of ">".
+Because "<" and ">" chars are reserved to parse XML and if you use it, syntax error will be produced.
+
+For example:
+
+...
+<event signal="clicked">echo "[[update]]
+[[widget name='label']]
+[[property name='text']]
+[[string]]{lineEdit.text}[[/string]]
+[[/property]]
+[[/widget]]
+[[/update]]"
+</event>
+...
+
+It will update text of "label" by text entered into "lineEdit".
+
+
