@@ -1,6 +1,4 @@
 /**
- * @file commandhandler.cpp
- *
  * Implementation of CommandHandler class
  *
  * VaL::bOK <val@valbok.name>
@@ -36,8 +34,6 @@ using namespace OpenForm;
 
 /**
  * Parses commands in \a command for widget \a topLevel
- *
- * @return Parsed command
  */
 QString CommandHandler::parse( QWidget *topLevel, QString command )
 {

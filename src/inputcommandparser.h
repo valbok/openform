@@ -28,7 +28,7 @@
 #define INPUTCOMMANDPARSER_H
 
 #include <QWidget>
-
+#include "uiloader.h"
 #include "ui4_p.h"
 
 namespace OpenForm

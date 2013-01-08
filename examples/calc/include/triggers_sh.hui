@@ -17,7 +17,7 @@
 
 <triggers>
     <trigger object="btnEqual">
-        <event signal="clicked">./include/calc.sh {input.text}</event>
+        <event signal="clicked">bash ./include/calc.sh "{input.text}"</event>
     </trigger>    
 </triggers>
 </update>

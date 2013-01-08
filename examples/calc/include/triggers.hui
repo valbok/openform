@@ -125,7 +125,7 @@
         [[update]]
     	    [[widget name='input']]
     		[[property name='text']]
-    		    [[string]][[/string]]
+    		    [[string]]0[[/string]]
     		[[/property]]
     	    [[/widget]]
     	[[/update]]"
@@ -187,7 +187,7 @@
     	</event>
     </trigger>
     <trigger object="btnEqual">
-        <event signal="clicked">./include/calc.sh {input.text}</event>
+        <event signal="clicked">php ./include/calc.php "{input.text}"</event>
     </trigger>
     
     <trigger object="action_phpCalc">

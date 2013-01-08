@@ -1,6 +1,4 @@
 /**
- * @file uiloader.h
- *
  * Definition of UiLoader class
  *
  * VaL::bOK <val@valbok.name>
@@ -27,8 +25,8 @@
 #ifndef UILOADER_H
 #define UILOADER_H
 
+#include "uilib/formbuilder.h"
 #include "windowhandler.h"
-#include "formbuilder.h"
 #include "trigger.h"
 #include "ui4_p.h"
 #include "inputcommandparser.h"

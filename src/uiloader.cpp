@@ -30,7 +30,7 @@
 
 #include <QtGui/QtGui>
 #include "uiloader.h"
-#include "formbuilderextra_p.h"
+#include "uilib/formbuilderextra_p.h"
 
 using namespace OpenForm;
 
@@ -192,7 +192,6 @@ void UiLoader::createTriggers( DomTriggers *ui_triggers, QWidget *widget )
                 continue;
             }
 
-//fprintf( stderr, "ADded trigger: '%s'\n", command.toLocal8Bit().constData() );
             // Delete previous trigger for current object and signal
             UiLoader::deleteTriggers( objectName, signalName );
 
@@ -210,15 +209,8 @@ void UiLoader::createTriggers( DomTriggers *ui_triggers, QWidget *widget )
  */
 QWidget *UiLoader::create( DomUI *ui, QWidget *parentWidget )
 {
-    typedef QFormBuilderExtra::ButtonGroupHash ButtonGroupHash;
-
     QFormBuilderExtra *formBuilderPrivate = QFormBuilderExtra::instance( this );
     formBuilderPrivate->clear();
-    if ( const DomLayoutDefault *def = ui->elementLayoutDefault() )
-    {
-        m_defaultMargin = def->hasAttributeMargin() ? def->attributeMargin() : INT_MIN;
-        m_defaultSpacing = def->hasAttributeSpacing() ? def->attributeSpacing() : INT_MIN;
-    }
 
     DomWidget *ui_widget = ui->elementWidget();
     if ( !ui_widget )
@@ -235,32 +227,11 @@ QWidget *UiLoader::create( DomUI *ui, QWidget *parentWidget )
 
     this->initialize( ui );
 
-    if ( const DomButtonGroups *domButtonGroups = ui->elementButtonGroups() )
-    {
-        formBuilderPrivate->registerButtonGroups( domButtonGroups );
-    }
-
     QWidget *widget = QFormBuilder::create( ui_widget, parentWidget );
 
     if ( !widget )
     {
-        formBuilderPrivate->clear();
-
         return 0;
-    }
-
-    // Reparent button groups that were actually created to main container for them to be found in the signal/slot part
-    const ButtonGroupHash &buttonGroups = formBuilderPrivate->buttonGroups();
-    if ( !buttonGroups.empty() )
-    {
-        const ButtonGroupHash::const_iterator cend = buttonGroups.constEnd();
-        for ( ButtonGroupHash::const_iterator it = buttonGroups.constBegin(); it != cend; ++it )
-        {
-            if ( it.value().second )
-            {
-                it.value().second->setParent( widget );
-            }
-        }
     }
 
     // If UI widget exists and need to update it, use current UI widget for creating triggers etc.
@@ -272,9 +243,7 @@ QWidget *UiLoader::create( DomUI *ui, QWidget *parentWidget )
     this->createTriggers( ui->elementTriggers(), newWidget );
     this->createResources( ui->elementResources() ); // maybe this should go first, before create()...
     this->applyTabStops( newWidget, ui->elementTabStops() );
-    formBuilderPrivate->applyInternalProperties();
     this->reset();
-    formBuilderPrivate->clear();
 
     return widget;
 }
@@ -505,5 +474,3 @@ QList< DomProperty* > UiLoader::computeProperties( QObject *obj )
 
     return lst;
 }
-
-

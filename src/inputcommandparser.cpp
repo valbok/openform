@@ -31,7 +31,6 @@
  */
 
 #include "inputcommandparser.h"
-#include "uiloader.h"
 #include <QTextStream>
 
 using namespace OpenForm;
@@ -168,7 +167,7 @@ QString InputCommandParser::parseCommand( const QString &command )
 
     UiLoader loader;
 
-    QWidget *widget = loader.widgetByName( this->Widget, widgetName );
+    QWidget *widget = UiLoader::widgetByName( this->Widget, widgetName );
 
     if ( !widget )
     {
@@ -1009,4 +1008,3 @@ QString PropertyElementParser::parseSizeF( const DomProperty *p ) const
 
     return result;
 }
-

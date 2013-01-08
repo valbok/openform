@@ -151,8 +151,6 @@ void Trigger::finished( int exitCode, QProcess::ExitStatus exitStatus )
         return;
     }
 
-//fprintf( stderr, "Returned: '%s'\n", this->ReturnedData.toLocal8Bit().constData() );
-
     emit this->uiChanged( this->ReturnedData );
 }
 
