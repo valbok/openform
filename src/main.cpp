@@ -17,7 +17,7 @@
 
 #include "windowhandler.h"
 
-#define OPENFORM_VERSION "0.0.1"
+#define OPENFORM_VERSION "0.0.2"
 #define OPENFORM_VERSION_STR "Open Form version %s\n", OPENFORM_VERSION
 
 using namespace OpenForm;
