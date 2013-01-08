@@ -1,31 +1,9 @@
 /**
- * @file uiloader.cpp
- *
- * Implementation of UiLoader class
- *
- * VaL::bOK <val@valbok.name>
- * Created on: <11-Jun-2009 11:00:00 VaL>
+ * VaL::bOK <valbok@gmail.com>
+ * Created on: <10-Jun-2009 11:00:54 VaL>
  *
  * COPYRIGHT NOTICE: Copyright (C) 2009 VaL::bOK
  * SOFTWARE LICENSE: GNU General Public License v2.0
- * NOTICE: >
- *   This program is free software; you can redistribute it and/or
- *   modify it under the terms of version 2.0  of the GNU General
- *   Public License as published by the Free Software Foundation.
- *
- *   This program is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *   GNU General Public License for more details.
- *
- *   You should have received a copy of version 2.0 of the GNU General
- *   Public License along with this program; if not, write to the Free
- *   Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- *   MA 02110-1301, USA.
- */
-
-/**
- * This class contains methods to parse UI from xml
  */
 
 #include <QtGui/QtGui>
@@ -267,9 +245,6 @@ QWidget *UiLoader::createWidget( const QString &widgetName, QWidget *parentWidge
     return widget;
 }
 
-/*!
-    \internal
-*/
 QAction *UiLoader::createAction( QObject *parent, const QString &name )
 {
     if ( !this->Updating || !this->WinHandler || !this->WinHandler->hasUi() )
@@ -335,7 +310,7 @@ QWidget *UiLoader::load( const QString &data, QWidget *parentWidget )
 /**
  * Parses and creates widget from QXmlStreamReader
  *
- * @rerurn Widget - if new GUI should be installed
+ * Returns Widget - if new GUI should be installed
  *         0      - when just need to update current GUI
  */
 QWidget *UiLoader::load( QXmlStreamReader &reader, QWidget *parentWidget )

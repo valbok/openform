@@ -1,31 +1,9 @@
 /**
- * @file preprocessor.cpp
- *
- * Implementation of PreProcessor class
- *
- * VaL::bOK <val@valbok.name>
+ * VaL::bOK <valbok@gmail.com>
  * Created on: <10-Jun-2009 11:00:54 VaL>
  *
  * COPYRIGHT NOTICE: Copyright (C) 2009 VaL::bOK
  * SOFTWARE LICENSE: GNU General Public License v2.0
- * NOTICE: >
- *   This program is free software; you can redistribute it and/or
- *   modify it under the terms of version 2.0  of the GNU General
- *   Public License as published by the Free Software Foundation.
- *
- *   This program is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *   GNU General Public License for more details.
- *
- *   You should have received a copy of version 2.0 of the GNU General
- *   Public License along with this program; if not, write to the Free
- *   Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- *   MA 02110-1301, USA.
- */
-
-/**
- * This class contains methods to handle pre processors directives like comments or include etc
  */
 
 #include "preprocessor.h"
@@ -65,8 +43,6 @@ QString PreProcessor::process( const QString &data )
 
 /**
  * Processes derictivies like comments or includes
- *
- * @return Parsed data
  */
 QString PreProcessor::process()
 {
@@ -117,8 +93,7 @@ QString PreProcessor::process()
 
 /**
  * Processes include derective.
- *
- * @return Parsed data from file \a fileName or empty string if failed
+ * Returns parsed data from file \a fileName or empty string if failed
  */
 QString PreProcessor::processInclude( const QString &fileName, const int &linePos )
 {
@@ -161,8 +136,7 @@ QString PreProcessor::processInclude( const QString &fileName, const int &linePo
 
 /**
  * Searches file name in \a line that should be included.
- *
- * @return File name or empty string if failed
+ * Returns file name or empty string if failed
  */
 QString PreProcessor::findIncludeFileName( const QString &line, const int &linePos )
 {

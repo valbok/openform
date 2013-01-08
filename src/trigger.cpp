@@ -1,31 +1,9 @@
 /**
- * @file trigger.cpp
- *
- * Implementation of Trigger class
- *
- * VaL::bOK <val@valbok.name>
- * Created on: <11-Jun-2009 11:00:00 VaL>
+ * VaL::bOK <valbok@gmail.com>
+ * Created on: <10-Jun-2009 11:00:54 VaL>
  *
  * COPYRIGHT NOTICE: Copyright (C) 2009 VaL::bOK
  * SOFTWARE LICENSE: GNU General Public License v2.0
- * NOTICE: >
- *   This program is free software; you can redistribute it and/or
- *   modify it under the terms of version 2.0  of the GNU General
- *   Public License as published by the Free Software Foundation.
- *
- *   This program is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *   GNU General Public License for more details.
- *
- *   You should have received a copy of version 2.0 of the GNU General
- *   Public License along with this program; if not, write to the Free
- *   Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- *   MA 02110-1301, USA.
- */
-
-/**
- * This class contains methods to handle events e.g. to execute a command when someone clicks on button
  */
 
 #include "trigger.h"
@@ -33,12 +11,8 @@
 
 using namespace OpenForm;
 
-/**
- * Constructor
- */
 Trigger::Trigger( const QString &command, const QString &action, const QObject *object, const WindowHandler *windowHandler, const QString &sig ):
  Command( command ), WinHandler( windowHandler )
-
 {
     if ( !object )
     {
@@ -62,9 +36,6 @@ Trigger::Trigger( const QString &command, const QString &action, const QObject *
     }
 }
 
-/**
- * Sets action \a action
- */
 void Trigger::setAction( const QString &action, const QString &objectName, const QString &sig )
 {
     this->Action = ( action == Actions::EXECUTE || action == Actions::RETURN ) ? action : ( action.isEmpty() ? Actions::EXECUTE : QString() );
@@ -75,11 +46,6 @@ void Trigger::setAction( const QString &action, const QString &objectName, const
     }
 }
 
-/**
- * Handles trigger calls
- *
- * @return true if ok
- */
 bool Trigger::handle()
 {
     if ( this->Command.isEmpty() || !this->WinHandler )
