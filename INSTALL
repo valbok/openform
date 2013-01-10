@@ -1,8 +1,9 @@
 * REQUIREMENTS *
 
-1. Qt4
-2. Sources of Qt uilib
+Qt4 libs: QtCore, QtGui, QtDesigner
 
-* INSTALL
+* INSTALL *
 
-TODO
+Debian
+
+$ sudo apt-get install libqt4-dev; cd openform/src; make
