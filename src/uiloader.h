@@ -9,7 +9,7 @@
 #ifndef UILOADER_H
 #define UILOADER_H
 
-#include "uilib/formbuilder.h"
+#include <QtDesigner/QFormBuilder>
 #include "windowhandler.h"
 #include "trigger.h"
 #include "ui4_p.h"

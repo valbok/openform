@@ -8,7 +8,6 @@
 
 #include <QtGui/QtGui>
 #include "uiloader.h"
-#include "uilib/formbuilderextra_p.h"
 
 using namespace OpenForm;
 
@@ -187,9 +186,6 @@ void UiLoader::createTriggers( DomTriggers *ui_triggers, QWidget *widget )
  */
 QWidget *UiLoader::create( DomUI *ui, QWidget *parentWidget )
 {
-    QFormBuilderExtra *formBuilderPrivate = QFormBuilderExtra::instance( this );
-    formBuilderPrivate->clear();
-
     DomWidget *ui_widget = ui->elementWidget();
     if ( !ui_widget )
     {
