@@ -1,9 +1,14 @@
 #!/usr/bin/env python
 import getopt, sys
 
-opts, v = getopt.getopt(sys.argv[1:], "", [] )
+opts, v = getopt.getopt( sys.argv[1:], "", [] )
 
-r = eval( v[0] );
+try:
+   value = v[0]
+except IndexError:
+    sys.exit();
+
+r = eval( value );
 
 print "\
 <update>\
