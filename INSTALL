@@ -6,4 +6,4 @@ Qt4 libs: QtCore, QtGui, QtDesigner
 
 Debian
 
-$ sudo apt-get install libqt4-dev; cd openform/src; make
+$ sudo apt-get install qt4-qmake libqt4-dev; cd openform/src; make
