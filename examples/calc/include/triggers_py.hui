@@ -1,0 +1,28 @@
+<update>
+ <widget name="MainWindow">
+  <property name="windowTitle">
+    <string>Calc based on Python</string>
+  </property>
+  <action name="action_shCalc">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_phpCalc">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_pyCalc">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+  </action>
+ </widget>
+
+<triggers>
+    <trigger object="btnEqual">
+        <event signal="clicked">./include/calc.py "{input.text}"</event>
+    </trigger>
+</triggers>
+</update>

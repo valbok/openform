@@ -189,7 +189,7 @@
     <trigger object="btnEqual">
         <event signal="clicked">php ./include/calc.php "{input.text}"</event>
     </trigger>
-    
+
     <trigger object="action_phpCalc">
 	<event signal="triggered">cat include/triggers_php.hui</event>
     </trigger>
@@ -197,4 +197,9 @@
     <trigger object="action_shCalc">
 	<event signal="triggered">cat include/triggers_sh.hui</event>
     </trigger>
+
+    <trigger object="action_pyCalc">
+	<event signal="triggered">cat include/triggers_py.hui</event>
+    </trigger>
+
 </triggers>

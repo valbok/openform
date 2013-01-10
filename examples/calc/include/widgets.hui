@@ -338,6 +338,7 @@
     </property>
     <addaction name="action_shCalc"/>
     <addaction name="action_phpCalc"/>
+    <addaction name="action_pyCalc"/>
    </widget>
    <addaction name="menu_Calculator"/>
    <addaction name="menu_Use"/>
@@ -357,6 +358,20 @@
   <action name="action_shCalc">
    <property name="text">
     <string>&amp;Shell</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_pyCalc">
+   <property name="text">
+    <string>&amp;Python</string>
    </property>
    <property name="enabled">
     <bool>true</bool>
