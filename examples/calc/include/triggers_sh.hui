@@ -18,6 +18,6 @@
 <triggers>
     <trigger object="btnEqual">
         <event signal="clicked">bash ./include/calc.sh "{input.text}"</event>
-    </trigger>    
+    </trigger>
 </triggers>
 </update>

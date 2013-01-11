@@ -2,189 +2,189 @@
     <trigger object="btn0">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}0[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}0[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btn1">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}1[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}1[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btn2">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}2[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}2[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btn3">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}3[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}3[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btn4">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}4[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}4[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btn5">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}5[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}5[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btn6">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}6[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}6[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btn7">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}7[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}7[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btn8">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}8[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}8[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btn9">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}9[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}9[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btnDot">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}.[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}.[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btnCE">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]0[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]0[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btnPlusMinus">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]-({input.text})[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]-({input.text})[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btnAdd">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}+[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}+[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btnSub">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}-[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}-[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btnMul">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}*[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}*[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btnDiv">
         <event signal="clicked">echo "
         [[update]]
-    	    [[widget name='input']]
-    		[[property name='text']]
-    		    [[string]]{input.text}/[[/string]]
-    		[[/property]]
-    	    [[/widget]]
-    	[[/update]]"
-    	</event>
+              [[widget name='input']]
+                [[property name='text']]
+                    [[string]]{input.text}/[[/string]]
+                [[/property]]
+              [[/widget]]
+          [[/update]]"
+          </event>
     </trigger>
     <trigger object="btnEqual">
         <event signal="clicked">php ./include/calc.php "{input.text}"</event>

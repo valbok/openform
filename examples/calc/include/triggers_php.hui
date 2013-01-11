@@ -14,10 +14,10 @@
    </property>
   </action>
  </widget>
-                           
+
  <triggers>
     <trigger object="btnEqual">
-        <event signal="clicked">php include/calc.php {input.text}</event>
-    </trigger>    
+        <event signal="clicked">./include/calc.php "{input.text}"</event>
+    </trigger>
  </triggers>
 </update>
