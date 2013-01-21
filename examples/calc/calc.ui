@@ -1,3 +1,4 @@
+#!../../src/openform
 <ui version="4.0">
 
 #include "include/widgets.hui"
