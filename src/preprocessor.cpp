@@ -10,6 +10,7 @@
 #include <QTextStream>
 #include <QRegExp>
 #include <QStringList>
+#include <QDebug>
 
 using namespace OpenForm;
 
@@ -36,7 +37,7 @@ QString PreProcessor::process( QFile *file )
  */
 QString PreProcessor::process( const QString &data )
 {
-    this->Data = data;
+    this->Data = data.toLatin1();
 
     return this->process();
 }
@@ -53,7 +54,9 @@ QString PreProcessor::process()
     }
 
     QString trimmedLine, tmpLine;
-    QTextStream stream( &this->Data );
+    QTextStream stream( this->Data );
+
+    stream.setCodec( "UTF-8" );
 
     int linePos = 0;
     while ( !stream.atEnd() )
