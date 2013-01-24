@@ -1,0 +1,90 @@
+<widget class="QWidget" name="step1">
+    <attribute name="title">
+        <string>Step 1</string>
+    </attribute>
+
+    <widget class="QPushButton" name="pushStep1Next">
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>410</x>
+                <y>190</y>
+                <width>83</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Next</string>
+        </property>
+    </widget>
+
+    <widget class="QGroupBox" name="groupStep1">
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>481</width>
+                <height>171</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>Please, select which language should be used</string>
+        </property>
+
+        <widget class="QRadioButton" name="radioStep1RU">
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>40</y>
+                    <width>101</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Русский</string>
+            </property>
+        </widget>
+
+        <widget class="QRadioButton" name="radioStep1EN">
+            <property name="geometry">
+             <rect>
+                <x>20</x>
+                <y>70</y>
+                <width>101</width>
+                <height>21</height>
+               </rect>
+            </property>
+            <property name="text">
+                <string>English</string>
+            </property>
+        </widget>
+        <widget class="QRadioButton" name="radioStep1NO">
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>100</y>
+                    <width>101</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Norsk</string>
+            </property>
+        </widget>
+        <widget class="QRadioButton" name="radioStep1CN">
+            <property name="geometry">
+                <rect>
+                 <x>20</x>
+                 <y>130</y>
+                 <width>101</width>
+                 <height>21</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>中国的</string>
+            </property>
+        </widget>
+    </widget>
+</widget>

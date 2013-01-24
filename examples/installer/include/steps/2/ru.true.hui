@@ -1,0 +1,67 @@
+<update>
+    <widget class="QMainWindow" name="MainWindow">
+        <widget class="QWidget" name="centralwidget">
+            <widget class="QWidget" name="step2">
+                <property name="visible">
+                    <bool>true</bool>
+                </property>
+                <widget class="QPlainTextEdit" name="plainStep2">
+                    <property name="plainText">
+                      <string>Это очень важное сообщение на русском языке.
+Вы должны прочитать его полностью.
+А если не прочитаете, то вы бяка кислая.
+
+
+
+
+
+
+Кстати, заходите на www.artonym.net, там много голых сисек.
+                      </string>
+                     </property>
+                </widget>
+            </widget>
+            <widget name="step1">
+                <property name="visible">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget name="radioStep2Accept">
+                <property name="enabled">
+                    <bool>true</bool>
+                </property>
+                <property name="text">
+                    <string>Я с этим полностью согласен</string>
+                </property>
+            </widget>
+            <widget name="pushStep2Next">
+                <property name="text">
+                    <string>Вперед</string>
+                </property>
+            </widget>
+            <widget name="pushStep2Back">
+                <property name="text">
+                    <string>Опять</string>
+                </property>
+            </widget>
+            <widget name="groupBoxStep2">
+                <property name="title">
+                    <string>Вы все таки это сделали</string>
+                </property>
+            </widget>
+            <widget class="QMenuBar" name="menubar">
+                <widget class="QMenu" name="menu">
+                    <property name="title">
+                        <string>&amp;Тут нечего делать</string>
+                    </property>
+                </widget>
+            </widget>
+            <action name="action_Quit">
+                <property name="text">
+                    <string>&amp;Можно конечно выйти</string>
+                </property>
+            </action>
+
+        </widget>
+    </widget>
+</update>

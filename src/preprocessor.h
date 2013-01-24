@@ -43,7 +43,7 @@ class PreProcessor
     /**
      * Text data that should be processed
      */
-    QString Data;
+    QByteArray Data;
 
     /**
      * File name where data is fetched from
@@ -55,7 +55,7 @@ class PreProcessor
     QString process();
 
 public:
-    PreProcessor(): Data( QString() ), FileName( QString() ) { }
+    PreProcessor(): Data(), FileName( QString() ) { }
     ~PreProcessor() {}
     QString process( QFile *file );
     QString process( const QString &data );

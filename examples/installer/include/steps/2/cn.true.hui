@@ -1,0 +1,56 @@
+<update>
+    <widget class="QMainWindow" name="MainWindow">
+        <widget class="QWidget" name="centralwidget">
+            <widget class="QWidget" name="step2">
+                <property name="visible">
+                    <bool>true</bool>
+                </property>
+                <widget class="QPlainTextEdit" name="plainStep2">
+                    <property name="plainText">
+                        <string>如果你了解它，你会死</string>
+                    </property>
+                </widget>
+            </widget>
+            <widget name="step1">
+                <property name="visible">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget name="radioStep2Accept">
+                <property name="enabled">
+                    <bool>true</bool>
+                </property>
+                <property name="text">
+                    <string>我想死哭，请格式化我的硬盘</string>
+                </property>
+            </widget>
+            <widget name="pushStep2Next">
+                <property name="text">
+                    <string>哭</string>
+                </property>
+            </widget>
+            <widget name="pushStep2Back">
+                <property name="text">
+                    <string>救救我</string>
+                </property>
+            </widget>
+            <widget name="groupBoxStep2">
+                <property name="title">
+                    <string>您选择</string>
+                </property>
+            </widget>
+            <widget class="QMenuBar" name="menubar">
+                <widget class="QMenu" name="menu">
+                    <property name="title">
+                        <string>&amp;真棒菜单</string>
+                    </property>
+                </widget>
+            </widget>
+            <action name="action_Quit">
+                <property name="text">
+                    <string>&amp;他妈的</string>
+                </property>
+            </action>
+        </widget>
+    </widget>
+</update>

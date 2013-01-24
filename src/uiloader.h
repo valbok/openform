@@ -67,7 +67,6 @@ protected:
     virtual QWidget *create( DomUI *ui, QWidget *parentWidget );
     virtual QWidget *createWidget( const QString &widgetName, QWidget *parentWidget, const QString &name );
     virtual QAction *createAction( QObject *parent, const QString &name );
-    virtual QList< DomProperty* > computeProperties( QObject *obj );
 
     DomTriggers *saveTriggers();
     virtual void saveDom( DomUI *ui, QWidget *widget );

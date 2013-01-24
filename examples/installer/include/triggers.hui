@@ -1,0 +1,123 @@
+<triggers>
+    <trigger object="radioStep1RU">
+        <event signal="clicked">echo "
+            [[update]]
+                [[widget name='pushStep1Next']]
+                    [[property name='enabled']]
+                        [[bool]]true[[/bool]]
+                    [[/property]]
+              [[/widget]]
+          [[/update]]"
+        </event>
+    </trigger>
+    <trigger object="radioStep1EN">
+        <event signal="clicked">echo "
+            [[update]]
+                [[widget name='pushStep1Next']]
+                    [[property name='enabled']]
+                        [[bool]]true[[/bool]]
+                    [[/property]]
+              [[/widget]]
+          [[/update]]"
+        </event>
+    </trigger>
+    <trigger object="radioStep1NO">
+        <event signal="clicked">echo "
+            [[update]]
+                [[widget name='pushStep1Next']]
+                    [[property name='enabled']]
+                        [[bool]]true[[/bool]]
+                    [[/property]]
+              [[/widget]]
+          [[/update]]"
+        </event>
+    </trigger>
+    <trigger object="radioStep1CN">
+        <event signal="clicked">echo "
+            [[update]]
+                [[widget name='pushStep1Next']]
+                    [[property name='enabled']]
+                        [[bool]]true[[/bool]]
+                    [[/property]]
+              [[/widget]]
+          [[/update]]"
+        </event>
+    </trigger>
+    <trigger object="radioStep2Accept">
+        <event signal="clicked">echo "
+            [[update]]
+            [[widget name='centralwidget']]
+                [[widget name='pushStep2Next']]
+                    [[property name='enabled']]
+                        [[bool]]true[[/bool]]
+                    [[/property]]
+              [[/widget]]
+                [[widget name='radioStep2Accept']]
+                    [[property name='enabled']]
+                        [[bool]]false[[/bool]]
+                    [[/property]]
+              [[/widget]]
+              [[/widget]]
+          [[/update]]"
+        </event>
+    </trigger>
+
+    <trigger object="pushStep2Back">
+        <event signal="clicked">echo "
+            [[update]]
+                [[widget name='centralwidget']]
+                    [[widget name='step2']]
+                        [[property name='visible']]
+                            [[bool]]false[[/bool]]
+                        [[/property]]
+                    [[/widget]]
+                    [[widget name='step1']]
+                        [[property name='visible']]
+                            [[bool]]true[[/bool]]
+                        [[/property]]
+                    [[/widget]]
+                [[/widget]]
+          [[/update]]"
+        </event>
+    </trigger>
+
+    <trigger object="pushStep1Next">
+        <event signal="clicked">cat include/steps/2/ru.{radioStep1RU.checked}.hui include/steps/2/en.{radioStep1EN.checked}.hui include/steps/2/no.{radioStep1NO.checked}.hui include/steps/2/cn.{radioStep1CN.checked}.hui</event>
+    </trigger>
+
+    <trigger object="pushStep2Next">
+        <event signal="clicked">./include/steps/3/update.sh</event>
+    </trigger>
+
+    <trigger object="pushStep3Animate">
+        <event signal="clicked">bash ./include/steps/3/animate.sh "{progressStep3.value}"</event>
+    </trigger>
+
+    <trigger object="pushStep3Stop">
+        <event signal="clicked">echo "
+            [[update]]
+                [[triggers]]
+                    [[trigger object='pushStep3Animate']]
+                        [[event signal='clicked']]echo ''[[/event]]
+                    [[/trigger]]
+                [[/triggers]]
+                [[widget name='centralwidget']]
+                    [[widget name='labelStep3']]
+                        [[property name='text']]
+                            [[string]]Sorry, too late... {progressStep3.value}% of your porn has been already purged[[/string]]
+                        [[/property]]
+                    [[/widget]]
+                    [[widget name='pushStep3Exit']]
+                        [[property name='visible']]
+                            [[bool]]true[[/bool]]
+                        [[/property]]
+                    [[/widget]]
+                    [[widget name='pushStep3Stop']]
+                        [[property name='visible']]
+                            [[bool]]false[[/bool]]
+                        [[/property]]
+                    [[/widget]]
+                [[/widget]]
+          [[/update]]"</event>
+    </trigger>
+</triggers>

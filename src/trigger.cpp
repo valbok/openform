@@ -99,6 +99,7 @@ void Trigger::readFromStdout()
  */
 void Trigger::finished( int exitCode, QProcess::ExitStatus exitStatus )
 {
+    Trigger::disconnectHandlers();
     if ( exitStatus == QProcess::CrashExit )
     {
         fprintf( stderr, "Process has been crashed: '%s'\n", this->ParsedCommand.toLocal8Bit().constData() );
@@ -118,6 +119,7 @@ void Trigger::finished( int exitCode, QProcess::ExitStatus exitStatus )
     }
 
     emit this->uiChanged( this->ReturnedData );
+
 }
 
 /**
@@ -160,5 +162,17 @@ void Trigger::error( QProcess::ProcessError error )
         } break;
     }
 
+    Trigger::disconnectHandlers();
+
     fprintf( stderr, "Could not execute (%s): '%s'\n", errorStr.toLocal8Bit().constData(), this->ParsedCommand.toLocal8Bit().constData() );
+}
+
+void Trigger::disconnectHandlers() const
+{
+    // Read data when it is ready
+    disconnect( &this->Process, SIGNAL( readyReadStandardOutput() ), this, SLOT( readFromStdout() ) );
+    // When reading is finished return data to update UI
+    disconnect( &this->Process, SIGNAL( finished( int, QProcess::ExitStatus ) ), this, SLOT( finished( int, QProcess::ExitStatus ) ) );
+    // Handle errors
+    disconnect( &this->Process, SIGNAL( error( QProcess::ProcessError ) ), this, SLOT( error( QProcess::ProcessError ) ) );
 }

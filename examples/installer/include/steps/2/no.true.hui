@@ -1,0 +1,62 @@
+<update>
+    <widget class="QMainWindow" name="MainWindow">
+        <widget class="QWidget" name="centralwidget">
+            <widget class="QWidget" name="step2">
+                <property name="visible">
+                    <bool>true</bool>
+                </property>
+                <widget class="QPlainTextEdit" name="plainStep2">
+                    <property name="plainText">
+                        <string>Anders Behring Breivik ble født i Oslo. Kun seks måneder gammel flyttet han med sine foreldre og en seks år eldre halvsøster til London, der hans far, som er utdannet siviløkonom, arbeidet ved ambassaden i Storbritannia. Foreldrene skilte seg i 1980, da Breivik var halvannet år. Moren og halvsøsteren og Breivik flyttet da tilbake til Oslo.[4] I en bekymringsmelding til barnevernet i 1983 rapporterte psykologen at «gutten ble utsatt for omsorgssvikt og anbefalte at han ble flyttet fra hjemmet». Faren forsøkte igjen å få foreldreansvaret, men saken ble forlikt slik at Breivik ble boende hos moren.
+
+Videre i oppveksten bodde Breivik sammen med moren og halvsøsteren på vestkanten i Oslo, og han reiste på besøk til faren, som sammen med sin nye kone bodde i Paris i Frankrike. Han var også på farens feriehus i Normandie.
+
+Faren var lite fornøyd med det Breivik selv kaller hans «graffitifase» mellom 13 og 16 år, og han skal ha opplevd sønnen som «vanskelig». De to skal ha mistet kontakt i 1995, da Breivik var 15 år gammel. Sønnen skal likevel ha bevart en god relasjon med farens senere fraskilte norske kone, som arbeidet i byråkratiet og følte at hun hadde et spesielt bånd med sin tidligere manns sønn.
+
+15 år gammel mistet Breivik også kontakt med sine nærmeste venner, da han ble utstøtt fra gjengen. Foranledningen var at han i 1995 skal ha tystet på de andre etter å ha blitt arrestert av politiet for tagging.</string>
+                     </property>
+                </widget>
+            </widget>
+            <widget name="step1">
+                <property name="visible">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget name="radioStep2Accept">
+                <property name="enabled">
+                    <bool>true</bool>
+                </property>
+                <property name="text">
+                    <string>Jeg er enig med ham</string>
+                </property>
+            </widget>
+            <widget name="pushStep2Next">
+                <property name="text">
+                    <string>Les mer</string>
+                </property>
+            </widget>
+            <widget name="pushStep2Back">
+                <property name="text">
+                    <string>Jeg er redd</string>
+                </property>
+            </widget>
+            <widget name="groupBoxStep2">
+                <property name="title">
+                    <string>22-08-2011</string>
+                </property>
+            </widget>
+            <widget class="QMenuBar" name="menubar">
+                <widget class="QMenu" name="menu">
+                    <property name="title">
+                        <string>&amp;Terrorangrepet</string>
+                    </property>
+                </widget>
+            </widget>
+            <action name="action_Quit">
+                <property name="text">
+                    <string>&amp;I Oslo</string>
+                </property>
+            </action>
+        </widget>
+    </widget>
+</update>

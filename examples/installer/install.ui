@@ -1,0 +1,8 @@
+#!../../src/openform
+<ui version="4.0">
+
+#include "include/widgets.hui"
+#include "include/connections.hui"
+#include "include/triggers.hui"
+
+</ui>

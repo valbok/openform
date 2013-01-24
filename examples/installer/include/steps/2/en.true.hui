@@ -1,0 +1,68 @@
+<update>
+    <widget class="QMainWindow" name="MainWindow">
+        <widget class="QWidget" name="centralwidget">
+            <widget class="QWidget" name="step2">
+                <property name="visible">
+                    <bool>true</bool>
+                </property>
+                <widget class="QPlainTextEdit" name="plainStep2">
+                    <property name="plainText">
+                      <string>On the day of his only daughter's wedding, Vito Corleone (Marlon Brando) hears requests in his role as the Godfather, the Don of a New York crime family. Vito's youngest son, Michael (Al Pacino), in Marine Corps khakis, introduces his girlfriend, Kay Adams (Diane Keaton), to his family at the sprawling reception. Vito's godson Johnny Fontane (Al Martino), a popular singer, pleads for help in securing a coveted movie role, so Vito dispatches his consigliere, Tom Hagen (Robert Duvall), to the abrasive studio head, Jack Woltz (John Marley), to secure the casting. Woltz is unmoved until the morning he wakes up in bed with the severed head of his prized stallion.
+
+Shortly before Christmas 1945, drug baron Virgil "The Turk" Sollozzo (Al Lettieri), backed by the Corleones' rivals, the Tattaglias, asks Vito for investment in the emerging drug trade and protection through his political connections, but Vito disapproves of drug dealers. Instead, he sends his enforcer, Luca Brasi (Lenny Montana) to spy on them, but two fish are sent to the family wrapped in Brasi's vest, confirming he "sleeps with the fishes". An assassination attempt by Sollozzo's men lands Vito in the hospital, so eldest son, Sonny (James Caan), takes command. Sollozzo kidnaps Hagen to pressure Sonny to accept his deal. Michael thwarts a second assassination attempt on his father at the hospital, but is accosted by corrupt police captain McCluskey (Sterling Hayden), who breaks his jaw. Sonny retaliates by having Tattaglia's son killed. Michael comes up with a plan to hit Sollozzo and McCluskey that his brother approves over Hagen's objections: on the pretext of settling the dispute, Michael lures the pair to a restaurant, retrieves a planted handgun and murders them.
+
+Despite a clampdown from the authorities, the Five Families erupt in open warfare and the brothers fear for their safety. Michael takes refuge in Sicily, and Fredo (John Cazale) is sheltered by associate Moe Greene (Alex Rocco) in Las Vegas. Sonny attacks his brother-in-law Carlo on the street for abusing his sister Connie (Talia Shire). When it happens again, Sonny speeds for her home but assassins ambush him at a highway toll booth and riddle him with machine gun fire.
+
+Vito is saddened to learn that, despite his hopes, Michael has become involved in the family business. However, Michael has fallen in love with Apollonia Vitelli (Simonetta Stefanelli) and married her in Sicily. His peace is shattered when a car bomb intended for him takes the life of his new wife.
+
+To end the feuds, Vito meets with the heads of the Five Families, withdrawing his opposition to the Tattaglias' heroin business and swearing to forgo revenge for Sonny's murder. He deduces that the Tattaglias were under orders of the now dominant Don Emilio Barzini (Richard Conte). With his safety guaranteed, Michael returns home and over a year later marries Kay. Seeing his father at the end of his career and his surviving brother too weak, Michael takes the reins of the family and promises his wife to make it legitimate within five years.
+
+Biding his time, Michael allows rival families to pressure Corleone enterprises even as he plans to move family operations to Nevada, while delegating New York operations to members who stay behind. Hagen, upset when Michael replaces him with Vito, is mollified by the older man's reassurance about their long-range plans for him. When Michael travels to Las Vegas to buy out Greene's stake in the family's casinos, Greene derides the Corleones as a fading power. Michael's anger is fueled when Fredo falls under Greene's sway.
+
+Vito collapses and dies in his garden in 1955 while playing with Michael’s son, Anthony. At the funeral, caporegime Salvatore Tessio (Abe Vigoda) arranges a meeting between Michael and Don Barzini, signalling his treachery as Vito had warned. The meeting is set for the same day as the christening of Connie's son, to whom Michael will stand as godfather. As the christening proceeds, Corleone assassins, acting on Michael's orders, murder the other New York dons and Moe Greene. Tessio is told that Michael is aware of his betrayal and taken off to his death. After Carlo is questioned by Michael on his involvement in setting up Sonny's murder and confesses he was contacted by Barzini, caporegime Peter Clemenza (Richard S. Castellano) kills him with a garrote wire. Michael is confronted by Connie, who accuses him of having her husband killed. He denies killing Carlo when questioned by Kay, an answer she accepts. As Kay watches warily, Michael receives his capos, who address him as the new Don Corleone.</string>
+                     </property>
+                </widget>
+            </widget>
+            <widget name="step1">
+                <property name="visible">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget name="radioStep2Accept">
+                <property name="enabled">
+                    <bool>true</bool>
+                </property>
+                <property name="text">
+                    <string>Greatest film in the world</string>
+                </property>
+            </widget>
+            <widget name="pushStep2Next">
+                <property name="text">
+                    <string>Agree</string>
+                </property>
+            </widget>
+            <widget name="pushStep2Back">
+                <property name="text">
+                    <string>Disagree</string>
+                </property>
+            </widget>
+            <widget name="groupBoxStep2">
+                <property name="title">
+                    <string>Corleone is watching</string>
+                </property>
+            </widget>
+            <widget class="QMenuBar" name="menubar">
+                <widget class="QMenu" name="menu">
+                    <property name="title">
+                        <string>&amp;Kill'em</string>
+                    </property>
+                </widget>
+            </widget>
+            <action name="action_Quit">
+                <property name="text">
+                    <string>&amp;All</string>
+                </property>
+            </action>
+        </widget>
+    </widget>
+</update>

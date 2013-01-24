@@ -1,0 +1,73 @@
+<class>MainWindow</class>
+<widget class="QMainWindow" name="MainWindow">
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>500</width>
+            <height>260</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="minimumSize">
+        <size>
+            <width>500</width>
+            <height>260</height>
+        </size>
+    </property>
+    <property name="maximumSize">
+        <size>
+            <width>500</width>
+            <height>260</height>
+        </size>
+    </property>
+    <property name="windowTitle">
+        <string>The greatest installer ever</string>
+    </property>
+    <widget class="QWidget" name="centralwidget">
+        <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+            </sizepolicy>
+        </property>
+        # Include all steps to have an ability to create triggers
+        #include "include/steps/step1.hui"
+        #include "include/steps/step2.hui"
+        #include "include/steps/step3.hui"
+    </widget>
+    <widget class="QMenuBar" name="menubar">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>356</width>
+                <height>24</height>
+            </rect>
+        </property>
+        <widget class="QMenu" name="menu">
+            <property name="title">
+                <string>&amp;Awesome menu</string>
+            </property>
+            <addaction name="action_Quit"/>
+        </widget>
+        <addaction name="menu"/>
+    </widget>
+    <action name="action_Quit">
+        <property name="text">
+            <string>&amp;Quit</string>
+        </property>
+        <property name="shortcut">
+            <string>Ctrl+Q</string>
+        </property>
+        <property name="menuRole">
+            <enum>QAction::QuitRole</enum>
+        </property>
+    </action>
+</widget>
+<resources/>

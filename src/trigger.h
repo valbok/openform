@@ -72,6 +72,7 @@ private:
 
     QProcess Process;
     void setAction( const QString &action, const QString &objectName, const QString &sig );
+    void disconnectHandlers() const;
 
 private slots:
 
