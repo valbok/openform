@@ -1,87 +1,87 @@
 <widget class="QWidget" name="step2">
- <attribute name="title">
-  <string>Step 2</string>
- </attribute>
+    <attribute name="title">
+        <string>Step 2</string>
+    </attribute>
     <property name="visible">
-    <bool>false</bool>
+        <bool>false</bool>
     </property>
 
- <widget class="QGroupBox" name="groupBoxStep2">
-  <property name="geometry">
-   <rect>
-    <x>10</x>
-    <y>10</y>
-    <width>481</width>
-    <height>171</height>
-   </rect>
-  </property>
-  <property name="title">
-   <string>You selected</string>
-  </property>
+    <widget class="QGroupBox" name="groupBoxStep2">
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>481</width>
+                <height>171</height>
+            </rect>
+        </property>
+        <property name="title">
+            <string>You selected</string>
+        </property>
 
-    <widget class="QPlainTextEdit" name="plainStep2">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>457</width>
-       <height>140</height>
-      </rect>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-     <property name="plainText">
-      <string>You selected nothing</string>
-     </property>
+        <widget class="QPlainTextEdit" name="plainStep2">
+            <property name="enabled">
+                <bool>true</bool>
+            </property>
+            <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>20</y>
+                 <width>457</width>
+                 <height>140</height>
+                </rect>
+            </property>
+            <property name="readOnly">
+                <bool>true</bool>
+            </property>
+            <property name="plainText">
+                <string>You selected nothing</string>
+            </property>
+        </widget>
     </widget>
- </widget>
- <widget class="QPushButton" name="pushStep2Back">
-  <property name="geometry">
-   <rect>
-    <x>10</x>
-    <y>190</y>
-    <width>83</width>
-    <height>25</height>
-   </rect>
-  </property>
-  <property name="text">
-   <string>Back</string>
-  </property>
- </widget>
- <widget class="QPushButton" name="pushStep2Next">
-  <property name="enabled">
-   <bool>false</bool>
-  </property>
-  <property name="geometry">
-   <rect>
-    <x>400</x>
-    <y>190</y>
-    <width>83</width>
-    <height>25</height>
-   </rect>
-  </property>
-  <property name="text">
-   <string>Next</string>
-  </property>
- </widget>
- <widget class="QRadioButton" name="radioStep2Accept">
-  <property name="enabled">
-   <bool>false</bool>
-  </property>
-  <property name="geometry">
-   <rect>
-    <x>170</x>
-    <y>190</y>
-    <width>210</width>
-    <height>21</height>
-   </rect>
-  </property>
-  <property name="text">
-   <string>I really care</string>
-  </property>
- </widget>
+    <widget class="QPushButton" name="pushStep2Back">
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>190</y>
+                <width>83</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Back</string>
+        </property>
+    </widget>
+    <widget class="QPushButton" name="pushStep2Next">
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>400</x>
+                <y>190</y>
+                <width>83</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Next</string>
+        </property>
+    </widget>
+    <widget class="QRadioButton" name="radioStep2Accept">
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>190</y>
+             <width>210</width>
+             <height>21</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>I really care</string>
+        </property>
+    </widget>
 </widget>
