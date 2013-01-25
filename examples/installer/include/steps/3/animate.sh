@@ -1,6 +1,27 @@
 #!/bin/bash
 if [ $1 -ge 100 ]; then
-    echo '<update></update>'
+    echo '<update>
+        <widget name="centralwidget">
+            <widget name="labelStep3">
+                <property name="text">
+                    <string>OMG, we have found and deleted 32 videos of GAY porn.</string>
+                </property>
+            </widget>
+            <widget name="pushStep3Exit">
+                <property name="visible">
+                    <bool>true</bool>
+                </property>
+                <property name="text">
+                    <string>I am not surprised</string>
+                </property>
+            </widget>
+            <widget name="pushStep3Stop">
+                <property name="visible">
+                    <bool>false</bool>
+                </property>
+            </widget>
+        </widget>
+    </update>'
     exit 0;
 fi
 
@@ -17,4 +38,4 @@ echo '<update>
         </widget>
     </widget>
 </update>'
-sleep 0.2
+sleep 0.1
